@@ -1,0 +1,138 @@
+:root {
+  --fundo: #fafafa;
+  --superficie: #ffffff;
+  --texto: #18181b;
+  --texto-suave: #52525b;
+  --borda: #e4e4e7;
+  --acento: #4f46e5;
+  --acento-texto: #ffffff;
+}
+
+[data-theme="dark"] {
+  --fundo: #101014;
+  --superficie: #18181d;
+  --texto: #fafafa;
+  --texto-suave: #a1a1aa;
+  --borda: #27272a;
+  --acento: #818cf8;
+  --acento-texto: #101014;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  transition: background 0.3s, color 0.3s;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.marca {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--acento);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+.destaque { color: var(--acento); }
+
+.sub {
+  color: var(--texto-suave);
+  font-size: 1.125rem;
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--acento);
+  color: var(--acento-texto);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+}
+
+.botao-fantasma {
+  background: transparent;
+  color: var(--texto-suave);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.card {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.rodape {
+  border-top: 1px solid var(--borda);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}
+
+.rodape p { margin: 0; }
